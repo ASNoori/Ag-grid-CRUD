@@ -1,0 +1,70 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "user": [
+    {
+      "name": "noori",
+      "email": "noori@gmail.com",
+      "mobile": 6565765778,
+      "address": "iu",
+      "id": 1
+    },
+    {
+      "name": "sam",
+      "email": "sam@wr.co",
+      "mobile": 4786869636,
+      "address": "fdgf",
+      "id": 3
+    },
+    {
+      "name": "n",
+      "email": "b",
+      "mobile": 6576787786,
+      "address": "nhbjh",
+      "id": 4
+    },
+    {
+      "name": "hjm",
+      "email": "h",
+      "mobile": 3568900643,
+      "address": "hj",
+      "id": 7
+    },
+    {
+      "name": "g",
+      "email": "ytu",
+      "mobile": 6757676788,
+      "address": "hgj",
+      "id": 8
+    },
+    {
+      "name": "c",
+      "email": "i",
+      "mobile": 6756776788,
+      "address": "jhg",
+      "id": 9
+    },
+    {
+      "name": "lk",
+      "email": "hgh@as.co",
+      "mobile": 4546546565,
+      "address": "dvdv",
+      "id": 10
+    },
+    {
+      "name": "bn",
+      "email": "as@sd.com",
+      "mobile": 4567476786,
+      "address": "35,fdf",
+      "id": 11
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

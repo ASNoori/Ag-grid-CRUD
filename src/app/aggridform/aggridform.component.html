@@ -1,0 +1,68 @@
+<mat-card>
+    <mat-card-content>
+        <div class="header">
+            <h1>User Details</h1>
+        </div>
+        <form name="userform" [formGroup]="userform" #formDirective="ngForm">
+            <div class="example-container">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>User Name</mat-label>
+                    <input formControlName="name" matInput placeholder="User Name" type="text" />
+                    <mat-error *ngIf="!userform.controls['name'].valid">
+                        User name is required
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email" matInput type="email" placeholder="Email" />
+                    <mat-error *ngIf="!userform.controls['email'].valid">
+                        Email is required
+                    </mat-error>
+                </mat-form-field>
+                <button mat-raised-button *ngIf="this.submit" type="submit" [disabled]="!userform.valid"
+                    class="button-row button-width btn-color" color="primary" (click)="addUser(formDirective)">
+                    Save
+                </button>
+                <button mat-raised-button *ngIf="this.edit" type="button" [disabled]="!userform.valid"
+                    class="button-row button-width btn-color" color="primary" (click)="updateUser(formDirective)">
+                    Update
+                </button>
+            </div>
+            <div class="example-container">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Mobile Number</mat-label>
+                    <input formControlName="mobile" placeholder="10 digits phone number" type="number" matInput />
+
+                    <mat-error *ngIf="!userform.controls['mobile'].valid"> </mat-error>
+                    <mat-hint>Phone number must be 10 digits</mat-hint>
+                </mat-form-field>
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>User Address</mat-label>
+                    <textarea formControlName="address" matInput type="text"></textarea>
+                </mat-form-field>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>
+<button mat-raised-button type="submit" class="button-row button-width btn-color" color="primary"
+    (click)="downloadCSV()" style="margin-bottom: 10px; margin-left: 80%">
+    Download as CSV
+</button>
+<!-- AG Grid Angular Component -->
+<mat-dialog-content>
+    <ag-grid-angular style="width: 100%; height: 400px; margin: auto" class="ag-theme-alpine" [columnDefs]="columnDefs"
+        (gridReady)="onGridReady($event)" [defaultColDef]="defaultColDef" [rowData]="rowData">
+    </ag-grid-angular>
+</mat-dialog-content>
+<ng-template #deleteDialog>
+    <h1 mat-dialog-title>Delete Confirmation</h1>
+    <div mat-dialog-content>
+        Are you sure, you want to Delete {{ this.name }} ?
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button mat-dialog-close cdkFocusInitial style="color: green" (click)="confirmDelete(ParamsVal)">
+            Yes
+        </button>
+        <button mat-button mat-dialog-close color="warn">Cancel</button>
+    </div>
+</ng-template>

@@ -1,0 +1,65 @@
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 20px;
+  }
+
+  .full-width {
+    width: 30%;
+  }
+  .button-row {
+    padding-top: 5px;
+  }
+  .demo-table {
+    width: 100%;
+  }
+  
+  .demo-button-container {
+    padding-bottom: 16px;
+  }
+  
+  .demo-button + .demo-button {
+    margin-left: 8px;
+   
+  }
+  .add{
+    color:green;
+  }
+  
+ 
+  .button-width{
+    margin-left:8%;
+    width:10%
+  }
+  .mat-card{
+    margin-bottom:5%;
+  }
+  .ag-theme-alpine{
+  
+    margin: auto;
+  }
+  .btn-color{
+
+    background-color: rgb(0, 110, 255);
+  }
+  #close-icon{
+    margin-left: auto;
+    order: 2;
+    font-weight: bolder;
+}
+#close-icon:hover{
+cursor: pointer;
+}
+#dialogBtn{
+  position: absolute;
+  left: 84%;
+  top: 13%;
+  /* background-color: tomato; */
+}
+.field-width{
+  width: 100%;
+}
+.content-container{
+  margin: 5px 5px 15px 5px;
+  color: #8f9cb5;
+  display: flex;
+
+}
